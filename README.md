@@ -20,18 +20,10 @@ The code focuses on building intuition around how OpenCV handles color channels 
 
 ---
 
-## 📂 Repository Structure
-📁 project/
-├── Image Ingestion & Visualization with OpenCV.ipynb # Main notebook
-└── README.md # Documentation
-
-
----
-
 ## 🔧 Key Technologies
 
 - **Python 3**
-- **OpenCV (cv2)** — image ingestion, color space conversion, decoding
+- **OpenCV** — image ingestion, color space conversion, decoding
 - **NumPy** — array manipulation and reshaping
 - **Pillow (PIL)** — image display helpers
 - **IPython.display** — inline notebook visualization
@@ -46,6 +38,7 @@ The notebook shows how to use:
 
 ```python
 cv2.imread("path/to/image.jpg")
+```
 
 You will see how OpenCV loads images in **BGR format**, not RGB, and how to inspect their shape.
 
@@ -57,6 +50,7 @@ The notebook flattens images to reveal raw **BGR pixel triplets**:
 
 ```python
 img.reshape(-1, 3)[:5]
+```
 
 ## 3. Ingesting Images from a URL
 
@@ -77,6 +71,7 @@ The notebook includes a helper function (based on PIL) for proper visualization 
 
 ```python
 Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
+```
 
 ## 🧠 What I Learned
 
@@ -85,6 +80,4 @@ This notebook helps me build conceptual clarity around:
 - How image data is stored in memory  
 - How OpenCV interprets and decodes images  
 - Why color channel conversion is necessary  
-- How to move effortlessly between disk input, web input, and in-notebook visualization  
-
-These fundamentals are essential before advancing to tasks such as preprocessing, augmentation, model training, or real-time video pipelines.
+- How to move effortlessly between disk input, web input, and in-notebook visualization.
